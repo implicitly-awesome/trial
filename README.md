@@ -1,4 +1,4 @@
-# Trial day
+# Trial day [![Build Status](https://img.shields.io/travis/madeinussr/trial.svg?style=flat)](https://travis-ci.org/madeinussr/trial)
 
 Small web framework for writing simple JSON APIs. Based on Rack.
 
