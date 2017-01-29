@@ -1,0 +1,7 @@
+$LOAD_PATH << 'lib'
+
+source 'https://rubygems.org'
+
+ruby '2.3.3'
+
+gem 'rack', '~> 2.0'
