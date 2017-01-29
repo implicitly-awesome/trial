@@ -14,4 +14,8 @@ class Router
     actions[method.to_sym] = action
     @routes[path] = actions
   end
+
+  def action_for(path, method)
+    routes[path]&.fetch(method, nil)
+  end
 end

@@ -53,4 +53,20 @@ describe Router do
       expect(router.routes).to eq({ '/path' => { get: other_action } })
     end
   end
+
+  describe '#action_for' do
+    it 'returns an action by path and http method' do
+      router.add('/path', 'get', &action)
+
+      expect(router.action_for('/path', :get)).to eq(action)
+    end
+
+    context 'when action doesnt exist' do
+      it 'returns nil' do
+        router.add('/path', 'get', &action)
+
+        expect(router.action_for('/path', :post)).to be_nil
+      end
+    end
+  end
 end
