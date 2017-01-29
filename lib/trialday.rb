@@ -1,5 +1,6 @@
 require 'rack'
 require 'request_handler'
+require 'router'
 
 KNOWN_REQUEST_METHODS = %i(get post).freeze
 
